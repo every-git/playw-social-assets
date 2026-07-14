@@ -19,6 +19,13 @@ https://cdn.jsdelivr.net/gh/every-git/playw-social-assets@main/reels/<슬러그>
 reels/<YYYY-MM-DD-슬러그>/
   video.mp4    # 1080x1920 · 릴스 본편
   cover.jpg    # 릴스 커버(썸네일)
+
+carousels/<YYYY-MM-DD-슬러그>/
+  01.png ~ NN.png   # 1024x1536 · 캐러셀 슬라이드(01=커버, 마지막=CTA)
 ```
 
-원본·제작 정본은 `youtube/playw/shorts/episodes/<슬러그>/` (여기엔 배포용 사본만 둔다).
+- 폴더명 날짜 = **발행(예약) 날짜**. 일정이 바뀌면 릴스처럼 폴더를 rename.
+- 캐러셀도 jsDelivr URL로 Buffer에 전달: `https://cdn.jsdelivr.net/gh/every-git/playw-social-assets@main/carousels/<슬러그>/01.png`
+- 같은 경로에 파일을 덮어쓰면 CDN 캐시 때문에 안 바뀔 수 있다 — 수정 시 파일명/폴더명을 바꾼다(릴스와 동일 원칙).
+
+원본·제작 정본: 릴스는 `youtube/playw/shorts/episodes/<슬러그>/`에, 캐러셀 생성 스크립트는 sns-operation.md 운영 로그 참조. 여기엔 배포용 사본만 둔다.
